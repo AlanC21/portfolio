@@ -1,0 +1,150 @@
+.projectsSection {
+  @apply py-20;
+  
+  .sectionHeader {
+    @apply text-center mb-12;
+    
+    h2 {
+      @apply text-3xl font-bold mb-4;
+    }
+    
+    p {
+      @apply text-gray-600 dark:text-gray-300 max-w-2xl mx-auto;
+    }
+  }
+}
+
+.projectsGrid {
+  @apply grid gap-8;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.projectCard {
+  @apply relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer;
+  @apply bg-white dark:bg-gray-800;
+  backdrop-filter: blur(10px);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    
+    .imageContainer img {
+      transform: scale(1.05);
+    }
+    
+    .projectOverlay {
+      opacity: 1;
+    }
+  }
+}
+
+.imageContainer {
+  @apply relative overflow-hidden h-48;
+  
+  img {
+    @apply w-full h-full object-cover transition-transform duration-300;
+  }
+}
+
+.projectOverlay {
+  @apply absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300;
+  @apply flex items-center justify-center;
+  
+  .viewProject {
+    @apply px-6 py-2 rounded-full bg-white text-black font-medium;
+    @apply transform -translate-y-2 transition-transform duration-300;
+    
+    &:hover {
+      @apply bg-blue-500 text-white;
+    }
+  }
+}
+
+.content {
+  @apply p-6;
+  
+  h3 {
+    @apply text-xl font-semibold mb-2;
+  }
+  
+  p {
+    @apply text-gray-600 dark:text-gray-300 line-clamp-2;
+  }
+}
+
+.tags {
+  @apply flex flex-wrap gap-2 mt-4;
+}
+
+.tag {
+  @apply px-3 py-1 rounded-full text-sm;
+  @apply bg-blue-100 text-blue-600;
+  @apply dark:bg-blue-900 dark:text-blue-300;
+  @apply transition-colors duration-300;
+  
+  &:hover {
+    @apply bg-blue-200 dark:bg-blue-800;
+  }
+}
+
+.modal {
+  @apply fixed inset-0 z-50 flex items-center justify-center p-4;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.modalContent {
+  @apply relative max-w-2xl w-full rounded-lg p-8;
+  @apply bg-white dark:bg-gray-800;
+  @apply shadow-2xl;
+  
+  .modalHeader {
+    @apply flex items-center justify-between mb-6;
+    
+    h3 {
+      @apply text-2xl font-bold;
+    }
+  }
+  
+  .modalBody {
+    @apply space-y-6;
+    
+    img {
+      @apply w-full rounded-lg;
+    }
+    
+    p {
+      @apply text-gray-600 dark:text-gray-300;
+    }
+  }
+}
+
+.closeButton {
+  @apply absolute top-4 right-4 w-8 h-8 rounded-full;
+  @apply flex items-center justify-center;
+  @apply text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200;
+  @apply transition-colors duration-300;
+  @apply bg-gray-100 dark:bg-gray-700;
+  
+  &:hover {
+    @apply bg-gray-200 dark:bg-gray-600;
+  }
+}
+
+.links {
+  @apply flex gap-4 mt-6;
+  
+  .link {
+    @apply px-6 py-2 rounded-lg font-medium transition-all duration-300;
+    @apply flex items-center gap-2;
+    
+    &.primary {
+      @apply bg-blue-500 text-white hover:bg-blue-600;
+    }
+    
+    &.secondary {
+      @apply bg-gray-100 text-gray-700 hover:bg-gray-200;
+      @apply dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600;
+    }
+  }
+}
