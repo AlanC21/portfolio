@@ -59,6 +59,16 @@ const projects: Project[] = [
   },
 ];
 
+const tagColors: Record<string, string> = {
+  'React': 'rgba(97, 218, 251, 0.8)',
+  'NodeJS': 'rgba(104, 160, 99, 0.8)',
+  'JavaScript': 'rgba(240, 219, 79, 0.8)',
+  'MongoDB': 'rgba(71, 162, 72, 0.8)',
+  'Tailwind CSS': 'rgba(52, 144, 220, 0.8)',
+  'HTML': 'rgba(255, 102, 52, 0.8)',
+  'CSS': 'rgba(52, 152, 219, 0.8)'
+};
+
 const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const { setIsLoading } = useLoading();
@@ -97,9 +107,8 @@ const Projects: React.FC = () => {
             key={index}
             className={styles.projectCard}
             variants={item}
-            onClick={() => setSelectedProject(project)}
           >
-            <div className={styles.imageContainer}>
+            <div className={styles.imageContainer} onClick={() => setSelectedProject(project)}>
               <Image
                 src={project.image}
                 alt={project.title}
@@ -117,7 +126,15 @@ const Projects: React.FC = () => {
               <p>{project.description}</p>
               <div className={styles.tags}>
                 {project.tags.map((tag, i) => (
-                  <span key={i} className={styles.tag}>{tag}</span>
+                  <span
+                    key={i}
+                    className={styles.tag}
+                    style={{
+                      backgroundColor: tagColors[tag] || 'rgba(0, 0, 0, 0.2)',
+                    }}
+                  >
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>
@@ -176,7 +193,9 @@ const Projects: React.FC = () => {
                   <h4 className="text-lg font-semibold mb-2">Tecnologías utilizadas</h4>
                   <div className={styles.tags}>
                     {selectedProject.technologies.map((tech, index) => (
-                      <span key={index} className={styles.tag}>{tech}</span>
+                      <span key={index} className={styles.tag} style={{
+                        backgroundColor: tagColors[tech] || 'rgba(0, 0, 0, 0.2)',
+                      }}>{tech}</span>
                     ))}
                   </div>
                 </div>

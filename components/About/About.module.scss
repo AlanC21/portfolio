@@ -1,22 +1,30 @@
 .aboutContainer {
-  @apply relative min-h-screen flex items-center justify-center;
-  
+  @apply relative flex items-center justify-center py-16;
+
   section {
-    @apply max-w-2xl mx-auto px-6;
-    
+    @apply px-6 w-full max-w-7xl mx-auto;
+
     h2 {
       @apply mb-8 relative inline-block;
-      
+
       &:after {
         content: '';
         @apply absolute bottom-0 left-0 w-1/2 h-1 bg-blue-500 rounded-full;
         transform: translateY(8px);
       }
     }
-    
+
     p {
       @apply leading-relaxed text-gray-600 dark:text-gray-300;
       font-size: 1.1rem;
     }
+  }
+
+  .imageContainer {
+    @apply w-full flex-shrink-0 lg:w-1/2;
+  }
+
+  .textContainer {
+    @apply w-full lg:w-1/2;
   }
 }

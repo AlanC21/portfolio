@@ -1,5 +1,4 @@
 .projectsSection {
-  @apply py-20;
   
   .sectionHeader {
     @apply text-center mb-12;
@@ -20,7 +19,7 @@
 }
 
 .projectCard {
-  @apply relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer;
+  @apply relative overflow-hidden rounded-lg transition-all duration-300;
   @apply bg-white dark:bg-gray-800;
   backdrop-filter: blur(10px);
   
@@ -39,7 +38,7 @@
 }
 
 .imageContainer {
-  @apply relative overflow-hidden h-48;
+  @apply relative overflow-hidden h-48 cursor-pointer;
   
   img {
     @apply w-full h-full object-cover transition-transform duration-300;
@@ -78,13 +77,10 @@
 
 .tag {
   @apply px-3 py-1 rounded-full text-sm;
-  @apply bg-blue-100 text-blue-600;
-  @apply dark:bg-blue-900 dark:text-blue-300;
+  @apply bg-blue-100;
+  @apply dark:bg-blue-900;
   @apply transition-colors duration-300;
-  
-  &:hover {
-    @apply bg-blue-200 dark:bg-blue-800;
-  }
+
 }
 
 .modal {

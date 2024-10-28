@@ -139,7 +139,7 @@ const ContactForm: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-gray-800"
+              className="w-full p-2 border-4 border-[#0000001a] backdrop-blur-md rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-gray-800"
               placeholder="Tu nombre"
             />
           </motion.div>
@@ -161,7 +161,7 @@ const ContactForm: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-gray-800"
+              className="w-full p-2 border-4 border-[#0000001a] backdrop-blur-md rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-gray-800"
               placeholder="tu@email.com"
             />
           </motion.div>
@@ -183,7 +183,7 @@ const ContactForm: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
               rows={4}
-              className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-gray-800"
+              className="w-full p-2 border-4 border-[#0000001a] backdrop-blur-md rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-gray-800"
               placeholder="Escribe tu mensaje aquí..."
             />
           </motion.div>

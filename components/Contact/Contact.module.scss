@@ -1,6 +1,10 @@
 .contactSection {
-  @apply min-h-screen flex flex-col items-center justify-center relative;
-  
+  @apply min-h-screen flex flex-col items-center justify-center relative ;
+
+  backdrop-filter: blur(10px);
+  border: 4px solid #0000001a;
+  border-radius: 15px;
+
   h2 {
     @apply mb-12 relative inline-block;
     
