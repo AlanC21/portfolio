@@ -1,0 +1,42 @@
+// Skills.module.scss
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.skillLink {
+  text-decoration: none;
+}
+
+.skillCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  width: 120px;
+  height: 120px; /* Altura consistente */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  padding: 10px; /* Añadir padding para un mejor espaciado */
+  
+  &:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.skillLogo {
+  margin-bottom: 8px; /* Espaciado entre el logo y el nombre */
+  width: 50px; /* Ancho consistente para la imagen */
+  height: 50px; /* Alto consistente para la imagen */
+}
+
+.skillName {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}

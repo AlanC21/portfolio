@@ -1,40 +1,32 @@
-// components/Skills.tsx
 'use client'
-import { motion } from 'framer-motion';
-import styles from './Skilss.module.scss'
+import SkillCard from './SkillCard';
+import styles from './Skills.module.scss';
 
 const skills = [
-  { name: 'HTML/CSS', color: 'rgba(38, 77, 228, 0.8)' },     // #264DE4
-  { name: 'JavaScript', color: 'rgba(240, 219, 79, 0.8)' },   // #F0DB4F
-  { name: 'React', color: 'rgba(97, 218, 251, 0.8)' },        // #61DAFB
-  { name: 'Next.js', color: 'rgba(0, 0, 0, 0.8)' },           // #000000
-  { name: 'Node.js', color: 'rgba(104, 160, 99, 0.8)' },      // #68A063
-  { name: 'MongoDB', color: 'rgba(71, 162, 72, 0.8)' },       // #47A248
-  { name: 'MySQL', color: 'rgba(68, 121, 161, 0.8)' },        // #4479A1
-  { name: 'Nest', color: 'rgba(224, 35, 78, 0.8)' },          // #E0234E
-  { name: 'Git', color: 'rgba(241, 80, 47, 0.8)' },           // #F1502F
-  { name: 'GitHub', color: 'rgba(24, 23, 23, 0.8)' },         // #181717
-  { name: 'Docker', color: 'rgba(36, 150, 237, 0.8)' }        // #2496ED
+  { name: 'HTML', logo: '/logos/html5.svg', link: 'https://developer.mozilla.org/en-US/docs/Learn/HTML', color: 'rgba(227, 76, 38, 0.8)' },
+  { name: 'CSS', logo: '/logos/css.svg', link: 'https://developer.mozilla.org/en-US/docs/Learn/CSS', color: 'rgba(38, 77, 228, 0.8)' },
+  { name: 'JavaScript', logo: '/logos/javascript.svg', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', color: 'rgba(240, 219, 79, 0.8)' },
+  { name: 'React', logo: '/logos/react.svg', link: 'https://react.dev/', color: 'rgba(97, 218, 251, 0.8)' },
+  { name: 'Next.js', logo: '/logos/nextjs_icon_dark.svg', link: 'https://nextjs.org/', color: 'rgba(23, 23, 23, 0.8)' },
+  { name: 'Node.js', logo: '/logos/nodejs.svg', link: 'https://nodejs.org/', color: 'rgba(75, 155, 55, 0.8)' },
+  { name: 'MongoDB', logo: '/logos/mongodb.svg', link: 'https://www.mongodb.com/', color: 'rgba(87, 171, 47, 0.8)' },
+  { name: 'MySQL', logo: '/logos/mysql.svg', link: 'https://www.mysql.com/', color: 'rgba(0, 80, 140, 0.8)' },
+  { name: 'NestJS', logo: '/logos/nestjs.svg', link: 'https://nestjs.com/', color: 'rgba(237, 46, 100, 0.8)' },
+  { name: 'Git', logo: '/logos/git.svg', link: 'https://git-scm.com/', color: 'rgba(240, 80, 51, 0.8)' },
+  { name: 'GitHub', logo: '/logos/github-dark.svg', link: 'https://github.com/', color: 'rgba(36, 41, 46, 0.8)' },
+  { name: 'Docker', logo: '/logos/docker.svg', link: 'https://www.docker.com/', color: 'rgba(0, 123, 207, 0.8)' },
+  { name: 'TailwindCSS', logo: '/logos/tailwindcss.svg', link: 'https://tailwindcss.com/', color: 'rgba(56, 189, 248, 0.8)' }
 ];
 
-const Skills: React.FC = () => {
-  return (
-    <section id="skills" className={styles.skillsContainer}>
-      <h2 className="text-3xl font-bold mb-8">Tecnologías</h2>
-      <div className="flex flex-wrap justify-center gap-4">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            className={styles.skillCard}
-            style={{ backgroundColor: skill.color }}
-            whileHover={{ scale: 1.1 }}
-          >
-            {skill.name}
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
-};
+const Skills: React.FC = () => (
+  <section id="skills" className={styles.skillsContainer}>
+    <h2 className="text-3xl font-bold mb-8">Tecnologías</h2>
+    <div className="flex flex-wrap justify-center gap-4">
+      {skills.map((skill, index) => (
+        <SkillCard key={index} name={skill.name} color={skill.color} logo={skill.logo} link={skill.link} />
+      ))}
+    </div>
+  </section>
+);
 
 export default Skills;
