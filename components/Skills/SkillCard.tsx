@@ -14,9 +14,10 @@ interface SkillCardProps {
   logo: string;
   link: string;
   color: string;
+  borderColor: string;
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ name, logo, link, color }) => (
+const SkillCard: React.FC<SkillCardProps> = ({ name, logo, link, color, borderColor }) => (
   <a
     href={link}
     target="_blank"
@@ -25,7 +26,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, logo, link, color }) => (
   >
     <motion.div
       className={styles.skillCard}
-      style={{ backgroundColor: color }}
+      style={{ border: '3px solid', borderColor, backgroundColor: color }}
       whileHover={{ scale: 1.1 }}
     >
       <Image
