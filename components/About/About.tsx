@@ -3,6 +3,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from './About.module.scss';
 
+/**
+ * Componente de la sección "Sobre mí".
+ * @returns {JSX.Element} Sección que describe información personal y habilidades.
+ */
+
 const About: React.FC = () => {
   return (
     <div className={styles.aboutContainer}>

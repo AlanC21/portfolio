@@ -4,6 +4,12 @@ import { Link as ScrollLink } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
+/**
+ * Interface para un enlace de navegación.
+ * Representa un elemento en la barra de navegación.
+ * @interface
+ */
+
 interface NavLinkProps {
   to: string;
   children: React.ReactNode;
@@ -21,6 +27,12 @@ const NavLink: React.FC<NavLinkProps> = ({ to, children, onClick }) => (
     {children}
   </ScrollLink>
 );
+
+/**
+ * Componente de navegación (Navbar).
+ * Proporciona enlaces de navegación para moverse entre secciones de la página.
+ * @returns {JSX.Element} Barra de navegación.
+ */
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);

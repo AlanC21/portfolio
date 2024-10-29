@@ -3,11 +3,22 @@ import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Send, X, CheckCircle, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+/**
+ * Interface para los datos del formulario de contacto.
+ * @interface
+ */
+
 interface AlertProps {
   type: 'success' | 'error';
   message: string;
   onClose: () => void;
 }
+
+/**
+ * Componente de la sección "Contacto".
+ * Permite enviar mensajes de contacto.
+ * @returns {JSX.Element} Formulario de contacto.
+ */
 
 const CustomAlert: React.FC<AlertProps> = ({ type, message, onClose }) => (
   <motion.div

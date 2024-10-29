@@ -2,6 +2,12 @@
 import { motion } from 'framer-motion';
 import styles from './Loader.module.scss';
 
+/**
+ * Componente de cargador animado.
+ * Utilizado para mostrar un indicador de carga en la aplicación.
+ * @returns {JSX.Element} Cargador animado.
+ */
+
 export const Loader = () => {
   return (
     <motion.div

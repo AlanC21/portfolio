@@ -2,6 +2,12 @@
 import SkillCard from './SkillCard';
 import styles from './Skills.module.scss';
 
+/**
+ * Lista de habilidades técnicas.
+ * Cada habilidad incluye un nombre, ícono y nivel de competencia.
+ * @type {Array<SkillCard>}
+ */
+
 const skills = [
   { name: 'HTML', logo: '/logos/html5.svg', link: 'https://developer.mozilla.org/en-US/docs/Learn/HTML', color: 'rgba(227, 76, 38, 0.8)' },
   { name: 'CSS', logo: '/logos/css.svg', link: 'https://developer.mozilla.org/en-US/docs/Learn/CSS', color: 'rgba(38, 77, 228, 0.8)' },
@@ -17,6 +23,12 @@ const skills = [
   { name: 'Docker', logo: '/logos/docker.svg', link: 'https://www.docker.com/', color: 'rgba(0, 123, 207, 0.8)' },
   { name: 'TailwindCSS', logo: '/logos/tailwindcss.svg', link: 'https://tailwindcss.com/', color: 'rgba(56, 189, 248, 0.8)' }
 ];
+
+/**
+ * Componente de la sección "Tecnologias".
+ * Muestra una lista de habilidades y tecnologías dominadas.
+ * @returns {JSX.Element} Sección de Tecnologias.
+ */
 
 const Skills: React.FC = () => (
   <section id="skills" className={styles.skillsContainer}>

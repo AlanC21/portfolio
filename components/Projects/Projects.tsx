@@ -6,6 +6,11 @@ import { useLoading } from '@/contexts/LoadingContext';
 import { Github, ExternalLink, X } from 'lucide-react';
 import styles from './Projects.module.scss';
 
+/**
+ * Interface que representa un proyecto.
+ * @interface
+ */
+
 interface Project {
   title: string;
   description: string;
@@ -17,6 +22,12 @@ interface Project {
   features: string[];
   technologies: string[];
 }
+
+/**
+ * Lista de proyectos destacados.
+ * Cada proyecto incluye un título, descripción, imagen, etiquetas, enlaces, y tecnologías utilizadas.
+ * @type {Array<Project>}
+ */
 
 const projects: Project[] = [
   {
@@ -68,6 +79,12 @@ const tagColors: Record<string, string> = {
   'HTML': 'rgba(255, 102, 52, 0.8)',
   'CSS': 'rgba(52, 152, 219, 0.8)'
 };
+
+/**
+ * Componente de visualización de proyectos.
+ * Muestra una galería de proyectos destacados con detalles.
+ * @returns {JSX.Element} La sección de proyectos.
+ */
 
 const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);

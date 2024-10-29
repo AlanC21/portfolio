@@ -3,9 +3,21 @@
 import { motion } from 'framer-motion';
 import styles from './Experience.module.scss'
 
+/**
+ * Lista de experiencias laborales o de proyectos.
+ * Cada elemento describe una experiencia con detalles.
+ * @type {Array<{ role: string, company: string, description: string, startDate: string, endDate?: string }>}
+ */
+
 const experiences = [
   { role: 'Desarrollador FullStack', company: 'FinGuru', year: '2024 - Present' },
 ];
+
+/**
+ * Componente de la sección "Experiencia".
+ * Muestra una lista de experiencias laborales o de proyectos.
+ * @returns {JSX.Element} Sección de experiencia.
+ */
 
 const Experience: React.FC = () => {
   return (
