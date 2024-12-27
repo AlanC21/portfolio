@@ -39,7 +39,7 @@ const Skills: React.FC = () => (
     <h2 className="text-3xl font-bold mb-8">Tecnologías</h2>
     <div className="flex flex-wrap justify-center gap-4">
       {skills.map((skill, index) => (
-        <SkillCard key={index} name={skill.name} color={skill.color} logo={skill.logo} link={skill.link} />
+        <SkillCard key={index} name={skill.name} color={skill.color} borderColor={skill.borderColor} logo={skill.logo} link={skill.link} />
       ))}
     </div>
   </section>
