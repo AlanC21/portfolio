@@ -26,7 +26,7 @@ const About: React.FC = () => {
             className="relative w-72 h-72 lg:w-96 lg:h-96 mb-6 lg:mb-0"
           >
             <Image
-              src="/MeImage.jpeg"
+              src="/MeImage.jpg"
               alt="Foto de Alan Cordoba"
               fill
               className="rounded-2xl shadow-xl object-cover"

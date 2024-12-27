@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -17,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Mi Portfolio",
   description: "Portfolio by Alan Cordoba",
 };
 

@@ -1,9 +1,7 @@
-/* app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos generales */
 body {
   @apply bg-white text-gray-800 font-sans antialiased transition-colors duration-300;
 }
@@ -21,12 +19,10 @@ a {
   text-decoration: none;
 }
 
-/* Sección para espaciado entre componentes */
 section {
   @apply py-20 px-6 max-w-4xl mx-auto;
 }
 
-/* Estilos de animación */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -42,7 +38,6 @@ section {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Estilos para el scroll */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -59,7 +54,6 @@ section {
   @apply bg-gray-400 dark:bg-gray-500;
 }
 
-/* Utilities */
 .glass-effect {
   @apply backdrop-blur-lg bg-white/80 dark:bg-gray-900/80;
 }

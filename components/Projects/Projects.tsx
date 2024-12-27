@@ -18,7 +18,7 @@ interface Project {
   image: string;
   tags: string[];
   link: string;
-  github: string;
+  github?: string;
   features: string[];
   technologies: string[];
 }
@@ -33,8 +33,8 @@ const projects: Project[] = [
   {
     title: 'Mundialito',
     description: 'Fixture del Mundial de Futbol 2022',
-    image: '/MundialitoImage.png',
-    tags: ['React', 'NodeJS', 'JavaScript'],
+    image: '/projects/MundialitoImage.png',
+    tags: ['React', 'NodeJS', 'JavaScript', 'MongoDB', 'Tailwind CSS'],
     link: 'https://mundialito-alpha.vercel.app',
     github: 'https://github.com/SantinoCataldo/ProyectMundialito',
     features: [
@@ -51,21 +51,41 @@ const projects: Project[] = [
     ]
   },
   {
-    title: 'Todo List',
-    description: 'Una Pagina web para crear y eliminar tareas',
-    image: '/TodoListImage.png',
-    tags: ['Node.js', 'JavaScript', 'NodeJS'],
-    link: 'https://todo-list-seven-henna-45.vercel.app',
-    github: 'https://github.com/AlanC21/todo-list',
+    title: 'Tienda Digital',
+    description: 'Tienda Digital de productos',
+    image: '/projects/eCommerce.bmp',
+    tags: ['NextJS', 'TypeScript', 'NodeJS', 'MongoDB', 'Tailwind CSS'],
+    link: 'https://importaciones-oportunidades.netlify.app',
     features: [
-      'Sistema de tareas',
-      'Dashboard de creacion de Tareas',
+      'Autenticación de usuarios',
+      'API REST',
+      'Base de datos MongoDB'
     ],
     technologies: [
-      'Node.js',
+      'NextJS',
+      'TypeScript',
+      'NodeJS',
+      'MongoDB',
+      'Tailwind CSS'
+    ]
+  },
+  {
+    title: 'Clon DisneyPlus',
+    description: 'Clon de la plataforma de streaming Disney+',
+    image: '/projects/DisneyPlus.bmp',
+    tags: ['NextJS', 'JavaScript', 'NodeJS', 'MySQL', 'CSS'],
+    link: 'https://disneyp.vercel.app',
+    features: [
+      'Autenticación de usuarios',
+      'API REST',
+      'Base de datos MongoDB'
+    ],
+    technologies: [
+      'NextJS',
       'JavaScript',
-      'HTML',
-      'CSS',
+      'NodeJS',
+      'MySQL',
+      'CSS'
     ]
   },
 ];
@@ -74,10 +94,20 @@ const tagColors: Record<string, string> = {
   'React': 'rgba(97, 218, 251, 0.8)',
   'NodeJS': 'rgba(104, 160, 99, 0.8)',
   'JavaScript': 'rgba(240, 219, 79, 0.8)',
-  'MongoDB': 'rgba(71, 162, 72, 0.8)',
-  'Tailwind CSS': 'rgba(52, 144, 220, 0.8)',
-  'HTML': 'rgba(255, 102, 52, 0.8)',
-  'CSS': 'rgba(52, 152, 219, 0.8)'
+  'MongoDB': 'rgba(66, 163, 64, 0.8)',
+  'Tailwind CSS': 'rgba(56, 189, 248, 0.8)',
+  'HTML': 'rgba(227, 76, 38, 0.8)',
+  'CSS': 'rgba(38, 77, 228, 0.8)',
+  'TypeScript': 'rgba(49, 120, 198, 0.8)',
+  'C++': 'rgba(71, 128, 182, 0.8)',
+  'Java': 'rgba(237, 44, 56, 0.8)',
+  'Python': 'rgba(53, 114, 165, 0.8)',
+  'NextJS': 'rgba(23, 23, 23, 0.8)',
+  'ExpressJS': 'rgba(96, 96, 96, 0.8)',
+  'MySQL': 'rgba(0, 80, 140, 0.8)',
+  'Supabase': 'rgba(36, 198, 183, 0.8)',
+  'Git': 'rgba(240, 80, 51, 0.8)',
+  'GitHub': 'rgba(36, 41, 46, 0.8)'
 };
 
 /**
@@ -227,15 +257,17 @@ const Projects: React.FC = () => {
                     <ExternalLink size={20} />
                     Ver proyecto
                   </a>
-                  <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${styles.link} ${styles.secondary}`}
-                  >
-                    <Github size={20} />
-                    Ver código
-                  </a>
+                  {selectedProject.github && (
+                    <a
+                      href={selectedProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${styles.link} ${styles.secondary}`}
+                    >
+                      <Github size={20} />
+                      Ver código
+                    </a>)
+                  }
                 </div>
               </div>
             </motion.div>

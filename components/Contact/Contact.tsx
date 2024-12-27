@@ -242,10 +242,10 @@ const ContactForm: React.FC = () => {
         >
           También puedes contactarme en{' '}
           <a
-            href="mailto:alancordoba020@gmail.com"
+            href="mailto:alancordoba010@gmail.com"
             className="text-blue-500 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500 after:transform after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 after:origin-right hover:after:origin-left"
           >
-            alancordoba020@gmail.com
+            alancordoba010@gmail.com
           </a>
         </motion.p>
       </div>
