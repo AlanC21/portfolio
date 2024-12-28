@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import './Navbar.module.scss';
 
 /**
  * Interface para un enlace de navegación.

@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+'use client'
+
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import { LoadingProvider } from "@/contexts/LoadingContext";
+import { useEffect, useState } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,16 +17,17 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "Mi Portfolio",
-  description: "Portfolio by Alan Cordoba",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -32,8 +35,8 @@ export default function RootLayout({
       >
         <LoadingProvider>
           <div className="flex flex-col min-h-screen dark:bg-gray-900 dark:text-white transition-colors duration-300">
-            <Navbar />
-            <main className="flex-grow">{children}</main>
+            {mounted && <Navbar />}
+            <main className="flex-grow">{mounted ? children : null}</main>
             <footer className="text-center p-4 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
               © 2024 Alan G. Cordoba
             </footer>
