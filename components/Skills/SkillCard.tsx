@@ -25,7 +25,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, logo, link, color, borderCo
   >
     <motion.div
       className={styles.skillCard}
-      style={{ border: '3px solid', borderColor, backgroundColor: color }}
+      style={{ border: '1px solid', borderColor, backgroundColor: color }}
       whileHover={{ scale: 1.1 }}
     >
       <Image
